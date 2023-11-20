@@ -1,0 +1,64 @@
+// $변수 사용
+$primary-color: black;
+
+p {
+  background-color: $primary-color;
+}
+
+// @import(다른 Sass 파일 불러오기
+@import 'reset';
+@import 'variables';
+
+p {
+  color: $main-color;
+}
+
+// @mixin(함수화)
+@mixin button-style($bg-color, $font-size) {
+  border: none;
+  border-radius: 0.5rem;
+  background-color: $bg-color;
+  color: #fff;
+  font-size: $font-size;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+.btn-primary {
+  @include button-style(blue, 16px);
+}
+
+.btn-danger {
+  @include button-style(red, 18px);
+}
+
+// nesting(중첩)
+.btn {
+  width: 100px;
+  height: 50px;
+  background-color: pink;
+  border-radius: 20px;
+  text-align: center;
+
+  &:hover {
+    background-color: palevioletred;
+  }
+}
+
+// @extend(확장)
+.btn {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.btn-primary {
+  @extend .btn;
+  background-color: blue;
+}
