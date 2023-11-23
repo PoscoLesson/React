@@ -1,0 +1,9 @@
+.navbar {
+  display: flex;
+}
+.navbar__item {
+  padding: 5px 10px;
+}
+.navbar__item--selected {
+  background-color: pink;
+}

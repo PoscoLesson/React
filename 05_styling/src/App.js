@@ -1,3 +1,4 @@
+import NomalCss from './component/NomalCss';
 import ExCssModule from './component/ExCssModule';
 import ExSass from './component/ExSass';
 import ExStyledComponents from './component/ExStyledComponents';
@@ -9,31 +10,34 @@ import StyledComponents from './component/StyledComponents';
 function App() {
   return (
     <div className='App'>
-      {/* CSS Module 예시 */}
+      <h3>일반 CSS 예시</h3>
+      <NomalCss />
+
+      <h3>CSS Module 예시</h3>
       <ExCssModule />
       <br />
 
-      {/* Sass 예시 */}
+      <h3>Sass 예시</h3>
       <ExSass />
       <br />
 
-      {/* styled-component 예시 */}
+      <h3>styled-component 예시</h3>
       <ExStyledComponents />
       <br />
 
-      {/* CSS 실습 */}
+      <h3>CSS 실습</h3>
       <StyleCSS />
       <br />
 
-      {/* CSS Module 실습 */}
+      <h3>CSS Module 실습</h3>
       <StyleModule />
       <br />
 
-      {/* Sass 실습 */}
+      <h3>Sass 실습</h3>
       <StyleSass />
       <br />
 
-      {/* styled-components 실습 */}
+      <h3>styled-components 실습</h3>
       <StyledComponents />
     </div>
   );

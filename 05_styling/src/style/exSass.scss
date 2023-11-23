@@ -1,5 +1,5 @@
 // $변수 사용
-$primary-color: black;
+$primary-color: pink;
 
 p {
   background-color: $primary-color;
@@ -9,7 +9,7 @@ p {
 @import 'reset';
 @import 'variables';
 
-p {
+span {
   color: $main-color;
 }
 
@@ -39,26 +39,43 @@ p {
 }
 
 // nesting(중첩)
-.btn {
-  width: 100px;
-  height: 50px;
-  background-color: pink;
-  border-radius: 20px;
-  text-align: center;
+.navbar {
+  display: flex;
+  justify-content: space-between;
 
-  &:hover {
-    background-color: palevioletred;
+  & > .item {
+    padding: 5px 10px;
+    background-color: pink;
+
+    &:hover {
+      background-color: palevioletred;
+    }
   }
 }
 
-// @extend(확장)
-.btn {
-  padding: 10px;
-  margin: 10px;
-  border: 1px solid black;
+// 중첩을 사용하지 않고 일반 CSS로 작성한 경우
+.navbar {
+  display: flex;
+  justify-content: space-between;
 }
 
-.btn-primary {
-  @extend .btn;
-  background-color: blue;
+.navbar > .item {
+  padding: 5px 10px;
+  background-color: pink;
+}
+
+.navbar > .item:hover {
+  background-color: palevioletred;
+}
+
+// @extend(확장)
+.box {
+  height: 100px;
+  width: 100px;
+  border: 5px solid yellow;
+}
+
+.box-extend {
+  @extend .box;
+  background-color: skyblue;
 }
