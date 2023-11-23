@@ -15,8 +15,7 @@ export default function Alphabet() {
     if (!inputAlpha) {
       alert('알파벳을 입력해주세요!');
       return;
-    }
-    if (inputAlpha.trim().length === 0) {
+    } else if (inputAlpha.trim().length === 0) {
       alert('띄어쓰기는 입력되지 않습니다. 알파벳을 입력해주세요!');
       return;
     }
