@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 export default function RenderPersonInfo(props) {
   return (
@@ -14,7 +14,7 @@ export default function RenderPersonInfo(props) {
 }
 
 RenderPersonInfo.defaultProps = {
-  name: '코딩온',
+  name: "장화",
 };
 
 RenderPersonInfo.propTypes = {
